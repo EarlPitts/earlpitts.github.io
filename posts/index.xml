@@ -1,0 +1,45 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Posts on Bendeguz Seres</title>
+        <link>http://bendeguz.xyz/posts/</link>
+        <description>Recent content in Posts on Bendeguz Seres</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+        <lastBuildDate>Sat, 07 Mar 2020 22:09:41 +0100</lastBuildDate>
+        <atom:link href="http://bendeguz.xyz/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Python Environment</title>
+            <link>http://bendeguz.xyz/posts/venv/</link>
+            <pubDate>Sat, 07 Mar 2020 22:09:41 +0100</pubDate>
+            
+            <guid>http://bendeguz.xyz/posts/venv/</guid>
+            <description>For making your life a lot easier while developing with python, it&amp;rsquo;s important that you know about the concept of virtual environments. With virtual environments, you won&amp;rsquo;t clutter your global environment, and you can even use different versions of specific packages.
+Before we can discuss the topic of virtual environments, we have to know about package management in python.
+PIP Pip stands for Pip Installs Packages (recursive acronyms are apparently very popular among tech people).</description>
+            <content type="html"><![CDATA[<p>For making your life a lot easier while developing with python, it&rsquo;s important that you know about the concept of virtual environments.
+With virtual environments, you won&rsquo;t clutter your global environment, and you can even use different versions of specific packages.</p>
+<p>Before we can discuss the topic of virtual environments, we have to know about package management in python.</p>
+<h2 id="pip">PIP</h2>
+<p>Pip stands for Pip Installs Packages (recursive acronyms are apparently very popular among tech people). When you install a package with pip, it places it inside the current namespace, so you can import it in your scripts.<br>
+Using pip is really simple, you just write <code>pip install</code>, then the package you want. Pip can write the packages installed in the current environment with their version number into a file, that can be used to install the same packages elsewehere. To do this, just do:</p>
+<p><code>pip freeze &gt; requirements.txt</code></p>
+<p>This will create a requirements.txt file with the name and version number of all of your packages. (Or overwrite the old file if you have one.)</p>
+<p>So now that we know how to use pip, we can create our virtual environment.</p>
+<p>There are a number of ways to create virtual environments (pew, pipenv, virtualenv, just to name a few). I&rsquo;ll use venv, but everything should work with other methods.</p>
+<p>To create a virtual environment named <em>venv</em>, issue the command:</p>
+<p><code>python -m venv venv</code></p>
+<p>This will generate a bunch of file in a folder named venv.</p>
+<p><em>It&rsquo;s a good practice to make a line with the folder&rsquo;s name in your .gitignore, because (most of the time) you don&rsquo;t want to track your packages in version control.</em></p>
+<p>To &ldquo;activate&rdquo; your environment, you can source the activate file inside venv/bin/activate (assuming <em>venv</em> is your folder&rsquo;s name):</p>
+<p><code>source venv/bin/activate</code></p>
+<p>Now your environment&rsquo;s name will appear inside your propmt, and you&rsquo;re ready to go. Everything you install with pip and every environmental variable you set will be inside this environment.</p>
+<h2 id="env">.env</h2>
+<p>It&rsquo;s good practice to save your env variables in a .env file. This will contain passwords and local endpoints, and you probably don&rsquo;t want to put it in version control.<br>
+When you start developing, you can just source it, and the variables will be set in your environment.</p>
+]]></content>
+        </item>
+        
+    </channel>
+</rss>

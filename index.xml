@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Bendeguz Seres</title>
+    <link>http://bendeguz.xyz/</link>
+    <description>Recent content on Bendeguz Seres</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Sat, 07 Mar 2020 22:09:41 +0100</lastBuildDate><atom:link href="http://bendeguz.xyz/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About</title>
+      <link>http://bendeguz.xyz/about/</link>
+      <pubDate>Sun, 20 Dec 2020 20:59:22 +0100</pubDate>
+      
+      <guid>http://bendeguz.xyz/about/</guid>
+      <description>Hi! My name is Bendeguz. I’m a programmer living in Hungary. I’m currently working in the domain of IT Security.
+My interests are mainly systems programming, embedded systems and computer science in general, mainly the theory of computation and programming languages.
+I’m a firm believer of open source, the importance of decentralization, the UNIX philosophy and the hacker mindset. I think programming is one of the most creative and intellectually satisfying activities one can pursue.</description>
+    </item>
+    
+    <item>
+      <title>Python Environment</title>
+      <link>http://bendeguz.xyz/posts/venv/</link>
+      <pubDate>Sat, 07 Mar 2020 22:09:41 +0100</pubDate>
+      
+      <guid>http://bendeguz.xyz/posts/venv/</guid>
+      <description>For making your life a lot easier while developing with python, it&amp;rsquo;s important that you know about the concept of virtual environments. With virtual environments, you won&amp;rsquo;t clutter your global environment, and you can even use different versions of specific packages.
+Before we can discuss the topic of virtual environments, we have to know about package management in python.
+PIP Pip stands for Pip Installs Packages (recursive acronyms are apparently very popular among tech people).</description>
+    </item>
+    
+  </channel>
+</rss>
