@@ -1,59 +1,37 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
     <loc>http://bendeguz.xyz/about/</loc>
     <lastmod>2020-12-20T20:59:22+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>http://bendeguz.xyz/</loc>
     <lastmod>2020-03-07T22:09:41+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>http://bendeguz.xyz/tags/env/</loc>
     <lastmod>2020-03-07T22:09:41+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>http://bendeguz.xyz/tags/environment/</loc>
     <lastmod>2020-03-07T22:09:41+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>http://bendeguz.xyz/tags/pip/</loc>
     <lastmod>2020-03-07T22:09:41+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>http://bendeguz.xyz/posts/</loc>
     <lastmod>2020-03-07T22:09:41+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>http://bendeguz.xyz/tags/python/</loc>
     <lastmod>2020-03-07T22:09:41+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>http://bendeguz.xyz/posts/venv/</loc>
     <lastmod>2020-03-07T22:09:41+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>http://bendeguz.xyz/tags/</loc>
     <lastmod>2020-03-07T22:09:41+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>http://bendeguz.xyz/tags/virtual/</loc>
     <lastmod>2020-03-07T22:09:41+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>http://bendeguz.xyz/categories/</loc>
   </url>
-  
 </urlset>
