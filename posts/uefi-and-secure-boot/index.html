@@ -146,7 +146,7 @@ If you boot it in UEFI mode, it will install it in UEFI native mode.</p>
 <p>UEFI stands for Unified Extensible Firmware Interface.
 It&rsquo;s main goal is to standardize the booting process, and provide basic functionalities that were missing from BIOS.
 It&rsquo;s important to note that UEFI is just a specification, that would, in an ideal world, be fully implemented by the hardware vendors (which, unfortunately, is not always the case).</p>
-<p>Because UEFI can read the <em>partition table</em> and even the <em>file system</em>, it much more flexible than BIOS, which requires from the image that it boots to be in the master boot record of the disk.
+<p>Because UEFI can read the <em>partition table</em> and even the <em>file system</em>, it&rsquo;s much more flexible than BIOS, which requires from the image that it boots to be in the master boot record of the disk.
 To see how limiting this is: the master boot record is the first 512 bytes of the disk.
 And it also contains the partition table, so about 440 bytes remain for the bootstrap code, which starts the boot process.
 Of course nowadays half a kilobyte is not enough for anything, so what happens is that bootloaders use some kind of stub, that they place in the MBR, whose only job is to call the bootloader.</p>
@@ -160,7 +160,7 @@ It can be configured by NVRAM variables, and it has the boot order and the entri
 You can define your entries explicitly, but it also can define them automatically.
 In fallback mode, when it doesn&rsquo;t find the EFI apps defined in the boot entries, it will look at the EFI partitions, and tries to load <code>/EFI/BOOT/BOOT&lt;arch&gt;.EFI</code>
 Fallback is mostly used for booting from external devices.
-All it takes for a disk to be UEFI bootable is to have an EFI partition with at least on EFI image on it.</p>
+All it takes for a disk to be UEFI bootable is to have an EFI partition with at least one EFI image on it.</p>
 <p>As long as it&rsquo;s executable by UEFI, you can put anything in the EFI parititon.
 Usually the vendor ships the hardware with some applications already installed (usually in the <code>EFI/&lt;vendor&gt;</code> directory), like diagnostic and recovery tools, and also the EFI shell, which is exactly what it sounds like: a little shell you can use when booting fails for some reason.
 Knowing how to navigate the EFI shell can be life-saving, when you can&rsquo;t boot your OS normally, and you only have to know about 3 things:</p>
@@ -191,7 +191,7 @@ But what if you don&rsquo;t want to use an enterprise linux distro?
 That&rsquo;s where <em>signed boot loaders</em> come into the picture.</p>
 <h1 id="preloader-and-shim">Preloader and Shim</h1>
 <p>There are two knows signed bootloaders: preloader and shim.
-I will only show preloader, because that&rsquo;s whay I use, but the process should be similar with shim.</p>
+I will only show preloader, because that&rsquo;s what I use, but the process should be similar with shim.</p>
 <p>Preloader is a signed EFI app, that does one thing: calls your EFI executable.
 That EFI executable can be anything, so you can call your bootloader with it.
 (It should be possible to call directly your kernel, if you use it as an EFISTUB, but I&rsquo;m not sure how to pass the kernel parameters to it with the preloader.)</p>
