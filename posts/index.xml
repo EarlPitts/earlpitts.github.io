@@ -79,7 +79,7 @@ So these two should start fine wihout any problem.
 But what if you don&rsquo;t want to use an enterprise linux distro?
 That&rsquo;s where <em>signed boot loaders</em> come into the picture.</p>
 <h1 id="preloader-and-shim">Preloader and Shim</h1>
-<p>There are two knows signed bootloaders: preloader and shim.
+<p>There are two known signed bootloaders: preloader and shim.
 I will only show preloader, because that&rsquo;s what I use, but the process should be similar with shim.</p>
 <p>Preloader is a signed EFI app, that does one thing: calls your EFI executable.
 That EFI executable can be anything, so you can call your bootloader with it.
@@ -88,9 +88,9 @@ That EFI executable can be anything, so you can call your bootloader with it.
 <p>There is one last problem: Microsoft wouldn&rsquo;t sign something with their key, that launches arbitrary executables.
 This is why preloader and shim use an allowlist, called Machine Owner Key list.
 Your binary&rsquo;s hash has to be in the Machine Owner Key list, otherwise they won&rsquo;t start it, and you have to enroll your binary yourself.
-If your are using Arch, you can jsut install the <code>preloader-signed</code> package from the AUR, which should work out of the box.
+If you are using Arch, you can just install the <code>preloader-signed</code> package from the AUR, which should work out of the box.
 I will take this package for granted, so I won&rsquo;t discuss the process of enrolling the hash in the Machine Owner Key list, but you can find more information about it on the <a href="https://wiki.archlinux.org/title/Unified_Extensible_Firmware_Interface/Secure_Boot#PreLoader">Arch wiki</a>.</p>
-<p>After installing the <code>preloader-signed</code> package, you have to copy the Preloader and HashTool EFI images to you EFI partition.
+<p>After installing the <code>preloader-signed</code> package, you have to copy the Preloader and HashTool EFI images to your EFI partition.
 This depends on your setup, but for me, it&rsquo;s <code>&lt;efi_part&gt;/EFI/grub</code>.</p>
 <p><code># cp /usr/share/preloader-signed/{PreLoader,HashTool}.efi &lt;efi_part&gt;/EFI/grub</code></p>
 <p>Now copy the bootloader to the same folder, and rename it to <code>loader.efi</code></p>
