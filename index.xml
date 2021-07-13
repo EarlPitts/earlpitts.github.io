@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Mon, 21 Jun 2021 09:56:41 +0100</lastBuildDate><atom:link href="http://bendeguz.xyz/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 06 Jul 2021 09:05:39 +0200</lastBuildDate><atom:link href="http://bendeguz.xyz/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CALM Theory</title>
+      <link>http://bendeguz.xyz/posts/craft-conf-2021/</link>
+      <pubDate>Tue, 06 Jul 2021 09:05:39 +0200</pubDate>
+      
+      <guid>http://bendeguz.xyz/posts/craft-conf-2021/</guid>
+      <description>Recently, I had the opportunity to attend Craft Conference. Unfortunately, the event was entirely online (due to the pandemic), which means no free food, but the variety of the talks had compensated for it. The conference was 3 days long, and featured many well-knows speakers (like Kevlin Henney, Dave Farley, and others). There were 6 virtual &amp;ldquo;stages&amp;rdquo; you could choose from at any given time, and although the organizers tried putting different topics in each segment, so everyone could find their nieche, I was in a constant dilemma, trying to decide which talk to attend.</description>
+    </item>
+    
     <item>
       <title>UEFI and Secure Boot</title>
       <link>http://bendeguz.xyz/posts/uefi-and-secure-boot/</link>
