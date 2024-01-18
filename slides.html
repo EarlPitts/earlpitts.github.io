@@ -145,6 +145,7 @@ class="sourceCode erlang"><code class="sourceCode erlang"><span id="cb2-1"><a hr
 <li>Strict</li>
 <li>Telecommunication, distributed systems</li>
 <li>Actor model</li>
+<li>BEAM</li>
 </ul>
 </section>
 <section id="property-based-testing" class="slide level2">
@@ -190,6 +191,85 @@ class="sourceCode erlang"><code class="sourceCode erlang"><span id="cb3-1"><a hr
 <li>No false positives!</li>
 </ul>
 </section></section>
+<section id="scope" class="title-slide slide level1">
+<h1>Scope</h1>
+<ul>
+<li>Smallest part that was affected</li>
+<li>Diff</li>
+<li>AST</li>
+<li>Callgraph</li>
+</ul>
+</section>
+
+<section id="type-inference" class="title-slide slide level1">
+<h1>Type Inference</h1>
+<ul>
+<li>Generating data</li>
+<li>Erlang is dynamically typed</li>
+<li>TypEr
+<ul>
+<li>Success typing</li>
+</ul></li>
+</ul>
+</section>
+
+<section id="side-effects" class="title-slide slide level1">
+<h1>Side-Effects</h1>
+<ul>
+<li>Capture any IO</li>
+<li>Group leader</li>
+<li>Output
+<ul>
+<li>Compare together with return value</li>
+</ul></li>
+<li>Input</li>
+<li>Errors</li>
+</ul>
+</section>
+
+<section id="context" class="title-slide slide level1">
+<h1>Context</h1>
+<ul>
+<li>Concurrent processes</li>
+<li>Mailbox</li>
+<li>Parse transform
+<ul>
+<li>Translate message sending to IO</li>
+</ul></li>
+</ul>
+</section>
+
+<section>
+<section id="architecture" class="title-slide slide level1">
+<h1>Architecture</h1>
+
+</section>
+<section class="slide level2">
+
+<p><img data-src="architecture.png" /></p>
+</section></section>
+<section id="conclusions" class="title-slide slide level1">
+<h1>Conclusions</h1>
+<ul>
+<li>EquivcheckEr
+<ul>
+<li>Open-Source</li>
+<li>CLI tool with editor plugin (VSCode)</li>
+</ul></li>
+<li>Reasonably fast</li>
+<li>Evaluation</li>
+</ul>
+</section>
+
+<section id="futher-work" class="title-slide slide level1">
+<h1>Futher Work</h1>
+<ul>
+<li>Packaging!</li>
+<li>Configurability</li>
+<li>On-Demand compilation</li>
+<li>Editor plugin</li>
+</ul>
+</section>
     </div>
   </div>
 
