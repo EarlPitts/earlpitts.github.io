@@ -110,12 +110,9 @@
 </section>
 
 <section>
-<section id="background" class="title-slide slide level1">
-<h1>Background</h1>
+<section id="refactoring" class="title-slide slide level1">
+<h1>Refactoring</h1>
 
-</section>
-<section id="refactoring" class="slide level2">
-<h2>Refactoring</h2>
 </section>
 <section class="slide level2">
 
@@ -136,32 +133,6 @@ class="sourceCode erlang"><code class="sourceCode erlang"><span id="cb1-1"><a hr
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">sub(</span><span class="va">X</span><span class="fu">,</span><span class="va">Y</span><span class="fu">)</span> <span class="op">-&gt;</span> <span class="va">X</span> <span class="op">-</span> <span class="va">Y</span><span class="fu">.</span></span></code></pre></div>
 <div class="sourceCode" id="cb2"><pre
 class="sourceCode erlang"><code class="sourceCode erlang"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">f(</span><span class="va">X</span><span class="fu">,</span><span class="va">Y</span><span class="fu">)</span> <span class="op">-&gt;</span> <span class="fu">(</span><span class="va">X</span> <span class="op">+</span> <span class="va">Y</span><span class="fu">)</span> <span class="op">/</span> <span class="fu">(</span><span class="va">X</span> <span class="op">-</span> <span class="va">Y</span><span class="fu">).</span></span></code></pre></div>
-</section>
-<section id="erlang" class="slide level2">
-<h2>Erlang</h2>
-<ul>
-<li>(Mostly) Functional</li>
-<li>Dynamically, strongly typed</li>
-<li>Strict</li>
-<li>Telecommunication, distributed systems</li>
-<li>Actor model</li>
-<li>BEAM</li>
-</ul>
-</section>
-<section id="property-based-testing" class="slide level2">
-<h2>Property-based Testing</h2>
-<ul>
-<li>“Automated unit tests”</li>
-<li>Properties</li>
-<li>Generators</li>
-</ul>
-</section>
-<section class="slide level2">
-
-<p>Testing the functor law for list and map</p>
-<div class="sourceCode" id="cb3"><pre
-class="sourceCode erlang"><code class="sourceCode erlang"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">prop_functor_id()</span> <span class="op">-&gt;</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">?</span><span class="va">FORALL</span><span class="fu">(</span><span class="va">L</span><span class="fu">,</span> <span class="fu">list(int()),</span> <span class="fu">lists:map(</span><span class="kw">fun</span><span class="fu">(</span><span class="va">X</span><span class="fu">)</span> <span class="op">-&gt;</span> <span class="va">X</span> <span class="kw">end</span> <span class="fu">,</span> <span class="va">L</span><span class="fu">)</span> <span class="op">=:=</span> <span class="va">L</span><span class="fu">)</span></span></code></pre></div>
 </section></section>
 <section>
 <section id="motivation" class="title-slide slide level1">
@@ -191,6 +162,37 @@ class="sourceCode erlang"><code class="sourceCode erlang"><span id="cb3-1"><a hr
 <li>No false positives!</li>
 </ul>
 </section></section>
+<section>
+<section id="background" class="title-slide slide level1">
+<h1>Background</h1>
+
+</section>
+<section id="erlang" class="slide level2">
+<h2>Erlang</h2>
+<ul>
+<li>(Mostly) Functional</li>
+<li>Dynamically, strongly typed</li>
+<li>Strict</li>
+<li>Telecommunication, distributed systems</li>
+<li>Actor model</li>
+<li>BEAM</li>
+</ul>
+</section>
+<section id="property-based-testing" class="slide level2">
+<h2>Property-based Testing</h2>
+<ul>
+<li>“Automated unit tests”</li>
+<li>Properties</li>
+<li>Generators</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<p>Testing the functor law for list and map</p>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode erlang"><code class="sourceCode erlang"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">prop_functor_id()</span> <span class="op">-&gt;</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">?</span><span class="va">FORALL</span><span class="fu">(</span><span class="va">L</span><span class="fu">,</span> <span class="fu">list(int()),</span> <span class="fu">lists:map(</span><span class="kw">fun</span><span class="fu">(</span><span class="va">X</span><span class="fu">)</span> <span class="op">-&gt;</span> <span class="va">X</span> <span class="kw">end</span> <span class="fu">,</span> <span class="va">L</span><span class="fu">)</span> <span class="op">=:=</span> <span class="va">L</span><span class="fu">)</span></span></code></pre></div>
+</section></section>
 <section id="scope" class="title-slide slide level1">
 <h1>Scope</h1>
 <ul>
@@ -217,11 +219,7 @@ class="sourceCode erlang"><code class="sourceCode erlang"><span id="cb3-1"><a hr
 <h1>Side-Effects</h1>
 <ul>
 <li>Capture any IO</li>
-<li>Group leader</li>
-<li>Output
-<ul>
-<li>Compare together with return value</li>
-</ul></li>
+<li>Output</li>
 <li>Input</li>
 <li>Errors</li>
 </ul>
@@ -269,6 +267,11 @@ class="sourceCode erlang"><code class="sourceCode erlang"><span id="cb3-1"><a hr
 <li>On-Demand compilation</li>
 <li>Editor plugin</li>
 </ul>
+</section>
+
+<section id="thank-you" class="title-slide slide level1">
+<h1>Thank you!</h1>
+
 </section>
     </div>
   </div>
