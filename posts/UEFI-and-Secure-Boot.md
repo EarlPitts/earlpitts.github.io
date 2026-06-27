@@ -109,16 +109,22 @@ I will take this package for granted, so I won't discuss the process of enrollin
 After installing the `preloader-signed` package, you have to copy the Preloader and HashTool EFI images to your EFI partition.
 This depends on your setup, but for me, it's `<efi_part>/EFI/grub`.
 
-`# cp /usr/share/preloader-signed/{PreLoader,HashTool}.efi <efi_part>/EFI/grub`
+```sh
+# cp /usr/share/preloader-signed/{PreLoader,HashTool}.efi <efi_part>/EFI/grub
+```
 
 Now copy the bootloader to the same folder, and rename it to `loader.efi`
 
 And finally, add a new boot entry to the NVRAM (you can figure out the partition with `efibootmgr -v`):
 
-`# efibootmgr --verbose --disk /dev/<disk> --part <partition> --create --label "<name>" --loader <efi_part>/EFI/grub/PreLoader.efi`
+```sh
+# efibootmgr --verbose --disk /dev/<disk> --part <partition> --create --label "<name>" --loader <efi_part>/EFI/grub/PreLoader.efi
+```
 
 After this, you can change the boot order with the following command (use `efibootmgr -v` to get the entry numbers):
 
-`# efibootmgr -o xxx,yyy,zzz...`
+```sh
+# efibootmgr -o xxx,yyy,zzz...
+```
 
 If everything went according to the plan, you should be able to boot into your OS with the preloader boot entry.
