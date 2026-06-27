@@ -1,7 +1,6 @@
 ---
 title: "CALM Theory"
 date: 2021-07-06T09:05:39+02:00
-draft: false
 ---
 
 Recently, I had the opportunity to attend Craft Conference.

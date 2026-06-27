@@ -1,7 +1,6 @@
 ---
 title: "UEFI and Secure Boot"
 date: 2021-06-21T09:56:41+01:00
-draft: false
 toc: false
 images:
 tags:

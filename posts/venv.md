@@ -1,7 +1,6 @@
 ---
 title: "Python Environment"
 date: 2020-03-07T22:09:41+01:00
-draft: false
 toc: false
 images:
 tags:
